@@ -38,8 +38,12 @@ gridButton.addEventListener('click' , function() {
 makeGrid();
 });
 
+let reset = document.querySelector('#reset-btn');
+reset.addEventListener('click' , function() {
+window.location.reload();
+});
 
-//window.location.reload();  //how to reset grid after new input
+//how to reset grid after new input
 
 
 
