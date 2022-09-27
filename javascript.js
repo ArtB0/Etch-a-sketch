@@ -39,6 +39,22 @@ makeGrid();
 });
 
 
+//window.location.reload();  //how to reset grid after new input
+
+
+
+//Change color
+function changeColor (target) {
+    target.style.backgroundColor = 'black';
+}
+
+container.addEventListener("mouseover", function (o) {
+    target = o.target;
+
+    if (target.matches("div.cell")) {
+        changeColor(target);
+    }
+});
 
 
 
