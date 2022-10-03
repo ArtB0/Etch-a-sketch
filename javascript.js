@@ -8,9 +8,15 @@ let cells = document.getElementsByClassName("cell");
 
 function makeGrid() {
 let number = parseInt(prompt('Grid size' , '16'));
+
+if (number < 100) {
   makeRows(number);
   makeColumns(number);
 }
+else {
+  prompt ('too big')
+}
+};
 
 
 function makeRows(rowNum) {
@@ -43,12 +49,10 @@ reset.addEventListener('click' , function() {
 window.location.reload();
 });
 
-//how to reset grid after new input
 
 
-
-//Change color
-function changeColor (target) {
+//Change color to black
+function changeColorBlack (target) {
     target.style.backgroundColor = 'black';
 }
 
@@ -56,13 +60,17 @@ container.addEventListener("mouseover", function (o) {
     target = o.target;
 
     if (target.matches("div.cell")) {
-        changeColor(target);
+        changeColorBlack(target);
     }
 });
 
 
 
 
+//TO DO:
+//Reset grid after new input
+//Add 'clear' button
+//New grid in same total space
 
 
 
